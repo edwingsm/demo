@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS roles;
+
+CREATE TABLE roles (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(60) NOT NULL,
+);
+
+
+INSERT INTO roles (name) VALUES
+  ('ADMIN'),('USER');
