@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
@@ -8,7 +9,7 @@ import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Data
-public class UserUpdateForm {
+public class UserUpdateForm implements Serializable {
 
 
     private String role;

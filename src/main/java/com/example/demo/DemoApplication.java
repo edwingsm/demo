@@ -42,6 +42,17 @@ public class DemoApplication {
 		authService.registerUser(signUpForm);
 		log.info("Creating Admin for app");
 
+		final SignUpForm userForm = new SignUpForm();
+		userForm.setEmail("appuser@soemdomain.com");
+		userForm.setName("app user");
+		userForm.setUsername("appuser");
+		Set<String> userRole = new HashSet<>();
+		userRole.add("USER");
+		userForm.setRole(userRole);
+		userForm.setPassword("appus3r");
+		authService.registerUser(userForm);
+		log.info("Creating An User for app");
+
 	}
 
 }

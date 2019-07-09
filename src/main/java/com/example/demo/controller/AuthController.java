@@ -23,7 +23,7 @@ public class AuthController {
         return ResponseEntity.ok().build();
     }
 
-    @PutMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginForm loginForm) {
         return new ResponseEntity<>(authAndAdminService.authenticateUser(loginForm), HttpStatus.OK);
     }
